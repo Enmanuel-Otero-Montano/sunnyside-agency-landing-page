@@ -1,0 +1,476 @@
+:root {
+    --titles-and-others: 'Fraunces', serif; 
+    --text-and-others: 'Barlow', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(10, auto);
+    margin: 0;
+    Font-size: 18px;
+}
+
+.desktop {
+    display: none;
+}
+
+.mobile {
+    width: 100%;
+    display: block;
+}
+
+/* Estilos para el "header" */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.header__nav {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 335px;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: hsl(0, 0%, 100%);
+    z-index: 10;
+}
+
+.header__nav::before {
+    content: "";
+    position: absolute;
+    top: -35px;
+    right: 0;
+    border-right: 35px solid hsl(0, 0%, 100%);
+    border-top: 35px solid transparent;
+    border-left: 35px solid transparent;
+}
+
+.header__nav > a {
+    font-family: var(--text-and-others);
+    color: hsl(232, 10%, 55%);
+    text-decoration: none;
+}
+
+.header__nav a:last-child{
+    padding: 12px 18px;
+    font-family: var(--titles-and-others);
+    border-radius: 25px;
+    background-color: hsl(51, 100%, 49%);
+    color: hsl(212, 27%, 19%);
+}
+
+.hidden {
+    display: none;
+}
+
+.logo-nav-container {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.nav-button {
+    padding: 0;
+    border: none;
+    background: inherit;
+    color: hsl(0, 0%, 100%);
+}
+
+.nav-button > svg > path {
+    fill: hsl(0, 0%, 100%);
+}
+
+.header__title,
+.arrow {
+    position: absolute;
+}
+
+.header__title {
+    top: 25%;
+    font-size: 2.5rem;
+    font-family: var(--titles-and-others);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    color: hsl(0, 0%, 100%);
+}
+
+.arrow {
+    top: 51%;
+}
+
+/* Estilos para el contenido del "main" */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.position-r {
+    position: relative;
+}
+
+.transform,
+.stand-out {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.section__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2rem;
+    font-family: var(--titles-and-others);
+    font-weight: 900;
+    color: hsl(212, 27%, 19%);
+}
+
+.section__paragraph {
+    max-width: 740px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: var(--text-and-others);
+    line-height: 1.5;
+    color: hsl(232, 10%, 55%);
+}
+
+.section__link {
+    position: relative;
+    font-size: 1rem;
+    font-family: var(--titles-and-others);
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: hsl(212, 27%, 19%);
+}
+
+.underline-yellow::after,
+.underline-red::after {
+    content: "";
+    position: absolute;
+    left: -4px;
+    top: 12px;
+    height: 10px;
+    width: 134px;
+    border-radius: 25px;
+    z-index: -1;
+}
+
+.underline-yellow::after {
+    background-color: hsla(51, 100%, 49%, .3);
+}
+
+.underline-red::after {
+    background-color: hsla(7, 99%, 70%, .3);
+}
+
+.position-a {
+    position: absolute;
+}
+
+.graphic,
+.photography {
+    text-align: center;
+}
+
+.graphic {
+    color: hsl(167, 40%, 24%);
+}
+
+.photography {
+    color: hsl(198, 62%, 26%)
+}
+
+.graphic__title,
+.photography__title {
+    top: 63%;
+    width: 100%;
+    font-family: var(--titles-and-others);
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+.graphic__paragraph,
+.photography__paragraph {
+    top: 73%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 17px;
+    padding-right: 17px;
+    font-size: 1.1rem;
+    font-family: var(--text-and-others);
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: -.5px;
+}
+
+/* Estilos para la sección "Testimonials" */
+
+.testimonials__title {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    font-size: 1rem;
+    font-family: var(--titles-and-others);
+    color: hsl(210, 4%, 67%);
+    letter-spacing: 3.5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.testimonial-container {
+    margin-bottom: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.avatar {
+    width: 75px;
+    border-radius: 50%;
+}
+
+.testimonial {
+    font-family: var(--text-and-others);
+    color: hsl(213, 9%, 39%);
+    line-height: 1.8;
+}
+
+.client-name {
+    font-family: var(--titles-and-others);
+    font-weight: 900;
+    color: hsl(212, 27%, 19%);
+}
+
+.client-ocupation {
+    font-family: var(--text-and-others);
+    color: hsl(210, 4%, 67%);
+}
+
+/* Estilos para la sección "gallery" */
+
+.gallery {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+
+/* Estilos para el "footer" */
+
+.footer {
+    text-align: center;
+    background-color: hsl(169, 45%, 70%);
+}
+
+.footer__logo {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+path {
+    fill: hsl(168, 34%, 27%);
+}
+
+.footer__nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__nav > a {
+    font-family: var(--text-and-others);
+    text-decoration: none;
+    color: hsl(168, 34%, 27%);
+}
+
+.footer__socials-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 65%;
+    margin: 80px auto 50px;
+}
+
+/* Estilos para pantllas con un width igual o mayor a 1024px */
+
+@media (min-width: 1024px) {
+
+    .hidden {
+        display: initial;
+    }
+
+    .nav-button,
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: initial;
+        max-width: 100%;
+    }
+
+    .logo-nav-container {
+        margin-top: 30px;
+    }
+
+    .header__nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        top: initial;
+        right: 0;
+        width: 400px;
+        height: 50px;
+        margin-top: 35px;
+        background-color: initial;
+    }
+
+    .header__nav::before {
+        display: none;
+    }
+
+    .header__nav a {
+        color: hsl(0, 0%, 100%);
+    }
+    
+    .header__nav a:last-child{
+        padding: 16px 22px;
+        font-family: var(--titles-and-others);
+        font-size: 0.777rem;
+        text-transform: uppercase;
+        border-radius: 25px;
+        background-color: hsl(0, 0%, 100%);
+        color: hsl(212, 27%, 19%);
+    }
+
+    /* Estilos para el contenido del "main" */
+
+    .main {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: repeat(5 auto);
+    }
+
+    .transform {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    
+    .transform,
+    .stand-out {
+        align-items: flex-start;
+        padding: 90px 110px 0;
+        text-align: start;
+    }
+
+    .underline-yellow:hover::after {
+        background-color: hsl(51, 100%, 49%);
+    }
+    
+    .underline-red:hover::after {
+        background-color: hsl(7, 99%, 70%);
+    }
+
+    .section__title {
+        width: 65%;
+    }
+
+    .graphic__paragraph,
+    .photography__paragraph {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    .testimonials {
+        grid-column: 1 / 3;
+        grid-row: 4 / 5;
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        grid-template-rows: auto auto;
+    }
+
+    .testimonials__title {
+        grid-column: 2 / 3;
+        margin-top: 90px;
+    }
+
+    .testimonial-container {
+        grid-row: 2 / 3;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .testimonial-one {
+        grid-column: 1 / 2;
+    }
+
+    .testimonial-two {
+        grid-column: 2 / 3;
+    }
+
+    .testimonial-three {
+        grid-column: 3 / 4;
+    }
+
+    .gallery {
+        grid-column: 1 / 3;
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: auto;
+    }
+
+    /* Estilos para el "footer" */
+
+    .footer__nav {
+        width: 25%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer__nav > a:hover {
+        color: hsl(0, 0%, 100%);
+    }
+
+    .footer__socials-container {
+        width: 18%;
+    }
+
+    .footer__socials-container path:hover {
+        fill: hsl(0, 0%, 100%);
+    }
+}
+
+/* Estilos para pantllas con un width igual o mayor a 1440px */
+
+@media (min-width: 1440px) {
+
+    .graphic__paragraph,
+    .photography__paragraph {
+        padding-left: 190px;
+        padding-right: 190px;
+    }
+}
